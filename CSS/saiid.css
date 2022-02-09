@@ -1511,3 +1511,129 @@ border: 1px solid black;
   padding: 10px;
 }
 /* end top video */
+
+/* Start stat */
+.stat{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-image: url(../imgs/stats.jpg);
+  background-size: cover;
+  min-height: 300px;
+  z-index: 1;
+}
+.stat:after{
+  content:'';
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.89);
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.stat .detail{
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr ));
+gap: 20px;
+justify-content: space-between;
+}
+.stat .detail .card{
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.stat .detail .card::after,.stat .detail .card::before{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
+.stat .detail .card::after{
+  bottom: -100%;
+  right: 0;
+  
+}
+.stat .detail .card:hover::after{
+  bottom: 0;
+}
+
+.stat .detail .card::before{
+  top: -100%;
+  left: 0;
+}
+.stat .detail .card:hover::before{
+  top: 0;
+}
+
+.stat .detail .card h2{
+  font-size: 35px;
+}
+.stat .detail .card p{
+  color:var(--main-color);
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* end stat */
+
+/* Start discount */
+.discount{
+  display: flex;
+  flex-wrap: wrap;
+}
+.discount .partone{
+  flex: 1;
+  background-image: linear-gradient(to right ,#2195f3e7 0%,#2195f3e7 100%) ,url(../imgs/discount-background1.jpg) ;
+  text-align: center;
+  color: white;
+  padding: 40PX;
+}
+.discount .partone h3{
+  font-size: 35px;
+
+}
+.discount .partone p{
+  line-height: 2;
+  font-size: 18px;
+
+}
+.discount .partone img{
+  width: 300px;
+}
+.discount .parttwo{
+  flex: 1;
+  background-image: linear-gradient(to right ,rgba(255, 255, 255, 0.959) 0%,rgba(255, 255, 255, 0.993) 100%) ,url(../imgs/discount-background2.jpg) ;
+text-align: center;
+padding: 40PX;
+
+}
+.discount .parttwo h3{
+  font-size: 35px;
+}
+.discount .parttwo input{
+  display: block;
+  border: none;
+  background-color: var(--main-background);
+  padding: 20px;
+  margin: 20px auto;
+  width: 223px;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.486);
+}
+.discount .parttwo textarea{
+  background-color: var(--main-background);
+  border: none;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.555);
+
+}
+.discount .parttwo input[type="submit"]{
+  background-color: var(--main-color);
+  width:263px;
+  color:white;
+  font-weight: bold;
+}
